@@ -1,17 +1,13 @@
-function fetchData(url) {
-  fetch(url)
+function fetchData() {
+  fetch('')
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 }
 
-function startLoop() {
-  //replace urls with proper ones
-  const url1 = '';
-  const url2 = '';
-  setInterval(fetchData(url1), 1000);
-  setInterval(fetchData(url2), 2000);
+function startLoop(interval) {
+  setInterval(fetchData, interval);
 }
 
-// Start the loop
-startLoop();
+// Start the loop with a 500 interval (500 milliseconds)
+startLoop(500);
