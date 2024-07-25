@@ -13,5 +13,5 @@ function startLoop() {
   setInterval(fetchData(url2), 2000);
 }
 
-// Start the loop with a 5-second interval (5000 milliseconds)
+// Start the loop
 startLoop();
